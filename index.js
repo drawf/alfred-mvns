@@ -30,7 +30,7 @@ alfy.fetch('http://search.maven.org/solrsearch/select', {
 		  return {
 			  title: `${x.g}:${x.a}:${v}`,
 			  subtitle: `updated at ${dateFormat('yyyy-dd-MM', new Date(x.timestamp))}`,
-        arg: mvn,
+        arg: gradle,
         mods: {
           cmd: {
             arg: gradle,
