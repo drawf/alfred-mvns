@@ -14,8 +14,8 @@
   },
   "scripts": {
     "test": "xo && ava",
-    "postinstall": "alfy-init",
-    "preuninstall": "alfy-cleanup"
+    "postinstall": "alfred-link",
+    "preuninstall": "alfred-unlink"
   },
   "files": [
     "index.js",
