@@ -26,19 +26,19 @@ alfy.fetch('http://search.maven.org/solrsearch/select', {
 	  .map(x => {
       const v = x.v?x.v:x.latestVersion;
       const mvn = `<dependency>\n  <groupId>${x.g}</groupId>\n  <artifactId>${x.a}</artifactId>\n  <version>${v}</version>\n</dependency>`;
-      const gradle = `compile '${x.g}:${x.a}:${v}'`;
+      const gradle = `implementation '${x.g}:${x.a}:${v}'`;
 		  return {
 			  title: `${x.g}:${x.a}:${v}`,
 			  subtitle: `updated at ${dateFormat('yyyy-dd-MM', new Date(x.timestamp))}`,
         arg: mvn,
         mods: {
           cmd: {
-            arg: mvn,
-            subtitle: `copy maven dependency to clipboard`
-          },
-          alt: {
             arg: gradle,
             subtitle: `copy gradle dependency to clipboard`
+          },
+          alt: {
+            arg: mvn,
+            subtitle: `copy maven dependency to clipboard`
           }
         }
 		  };
