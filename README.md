@@ -1,11 +1,20 @@
 # alfred-mvns
 [![NPM](https://nodei.co/npm/alfred-mvns.png)](https://nodei.co/npm/alfred-mvns/)
 
+## 变更
+
+基于原版主要修改如下：
+* 修复 Alfred4 安装失败问题（Error: Alfred preferences not found at location）
+* 将默认使用 Gradle 而非 Maven
+* 将 Gradle 依赖前缀修改为 implementation
+
 ## Install
 
 *Requires [Node.js](https://nodejs.org) 4+ and the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).*
 
-- npm install `npm install -g alfred-mvns`
+~~- npm install `npm install -g alfred-mvns`~~
+
+- npm install `npm install -g https://github.com/drawf/alfred-mvns.git`
 
 - [download](https://github.com/xfslove/alfred-mvns/releases) workflow
 
