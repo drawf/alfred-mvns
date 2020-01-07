@@ -14,8 +14,8 @@
   },
   "scripts": {
     "test": "xo && ava",
-    "postinstall": "alfred-link",
-    "preuninstall": "alfred-unlink"
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
   },
   "files": [
     "index.js",
@@ -27,14 +27,14 @@
     "alfred",
     "alfred-workflow",
     "workflow",
-    "alfred-link"
+    "alfy"
   ],
   "dependencies": {
-    "alfy": "^0.6.0",
-    "date-format": "^1.1.0",
-    "alfred-link": "^0.3.1"
+    "alfy": "^0.9.1",
+    "date-format": "^1.1.0"
   },
   "devDependencies": {
+    "alfy-test": "^0.3.0",
     "ava": "*",
     "xo": "*"
   }
